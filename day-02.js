@@ -14,7 +14,7 @@ const secondNum = input.map(num => parseInt(num.split(':')[0].substring(0, num.s
 
 /*---- PART 1 ---- */
 
-const checkRange = (num1, num2, character, string) => {
+const checkPasswordValidityOne = (num1, num2, character, string) => {
 
     let validityCountOne = {
         valid: 0,
@@ -45,13 +45,13 @@ const checkRange = (num1, num2, character, string) => {
     console.log(validityCountOne)
     return validityCountOne
 }
-checkRange(firstNum, secondNum, letter, inputString)
+checkPasswordValidityOne(firstNum, secondNum, letter, inputString)
 ////My result was 625 valid, 375 invalid
 
 
 /*---- PART 2 ----*/
 
-const checkValidity = (num1, num2, character, string) => {
+const checkPasswordValidityTwo = (num1, num2, character, string) => {
 
     const validityCountTwo = {
         valid: 0,
@@ -77,5 +77,5 @@ const checkValidity = (num1, num2, character, string) => {
 }
 
 
-checkValidity(firstNum, secondNum, letter, inputString)
+checkPasswordValidityTwo(firstNum, secondNum, letter, inputString)
 //My result was 391 valid, 609 invalid
