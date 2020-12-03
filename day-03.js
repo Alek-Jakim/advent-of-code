@@ -1,36 +1,23 @@
 const fs = require('fs');
-
 let fileInput = fs.readFileSync('day-03.txt', 'utf-8').split(/\r?\n/);
-
 
 /*---- PART 1 ----*/
 
 let treeCount = 0;
-
 let row = 0
-
 let col = 0
 
+//The length of the input represents how many rows there are (added + 1 so it doesn't go out of bounds)
 while (row + 1 < fileInput.length) {
-
+    //adding one for moving down and three for movie right
     row += 1
-
     col += 3
-
+    //this way it will always be in bounds cuz the modulusr/remainder will be from 0 to 1 - the length of the row
     let piece = fileInput[row][col % fileInput[row].length];
 
-    if (piece === '#') {
-        treeCount += 1
-    }
+    if (piece === '#') { treeCount += 1 }
 }
-
-console.log(treeCount)
-
 //My result was 195
-
-
-
-
 
 
 // /*---- PART 2 ----*/
@@ -46,11 +33,9 @@ for (combo of combinations) {
     row = 0
     col = 0
 
-
     while (row + 1 < fileInput.length) {
 
         row += combo[1]
-
         col += combo[0]
 
         let piece = fileInput[row][col % fileInput[row].length];
@@ -62,6 +47,4 @@ for (combo of combinations) {
 
     total *= treeCount;
 }
-
-console.log(total)
 //My result was 3772314000
