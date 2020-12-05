@@ -1,10 +1,6 @@
-const getPassRow = (p) => {
-    let lowerHalf = 0;
-    let upperHalf = 127;
-
+const getPassRow = (p, lowerHalf, upperHalf) => {
     for (let i = 0; i < 6; i++) {
         let halvedValue = Math.floor((upperHalf + lowerHalf) / 2)
-
         if (p[i] === 'F') {
             upperHalf = halvedValue
         }
@@ -19,10 +15,7 @@ const getPassRow = (p) => {
     }
 }
 
-const getPassCol = (p) => {
-    let upperHalf = 7;
-    let lowerHalf = 0;
-
+const getPassCol = (p, lowerHalf, upperHalf) => {
     for (let i = 0; i < 2; i++) {
         let halvedValue = Math.floor((upperHalf + lowerHalf) / 2)
 

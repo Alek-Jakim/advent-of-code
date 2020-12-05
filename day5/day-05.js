@@ -8,8 +8,8 @@ let allIDS = [];
 /*---- PART 1 ----*/
 
 for (boardingPass of input) {
-    row = getPassRow(boardingPass.slice(0, 7))
-    col = getPassCol(boardingPass.slice(7, boardingPass.length))
+    row = getPassRow(boardingPass.slice(0, 7), 0, 127)
+    col = getPassCol(boardingPass.slice(7, boardingPass.length), 0, 7)
 
     id = row * 8 + col
     allIDS.push(id);
