@@ -5,6 +5,7 @@ const { getPassCol, getPassRow } = require('./day-05-functions')
 let highestID = 0;
 let allIDS = [];
 
+/*---- PART 1 ----*/
 
 for (boardingPass of input) {
     row = getPassRow(boardingPass.slice(0, 7))
@@ -18,12 +19,14 @@ for (boardingPass of input) {
     }
 }
 
+console.log(highestID) // result is 842 booooom
+
+/*---- PART 2 ----*/
+
 for (id of allIDS) {
     if (!allIDS.includes(id + 1) && allIDS.includes(id + 2)) {
         let mySeatID = id + 1;
         console.log(mySeatID) //my result is 617 boooooooom
     }
-
 }
 
-console.log(highestID) // result is 842 booooom
