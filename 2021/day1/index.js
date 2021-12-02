@@ -1,7 +1,7 @@
 // Get file system module
 const fs = require("fs");
 //Read the file input
-let input = fs.readFileSync("./text.txt", "utf-8");
+let input = fs.readFileSync("./input.txt", "utf-8");
 // Turn it into an array without line breaks
 let data = input.split(/\r?\n/);
 // Don't forget those pesky strings, turn them into numbers
